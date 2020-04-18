@@ -2,8 +2,8 @@
 Ping CLI application for MacOS or Linux
 
 ## Compile and run in terminal:
-gcc -o ping ping.c \
-sudo ./ping ping [-ip4] [-ip6] [-ttl value] <target_host>
+$ gcc -o ping ping.c \
+$ sudo ./ping ping [-ip4] [-ip6] [-ttl value] <target_host>
 
 ## Description
 The CLI app accepts a hostname or an IP address as its argument and send ICMP "echo requests" in a loop to the target while receiving "echo reply" messages. It reports loss and RTT times for each sent message.
