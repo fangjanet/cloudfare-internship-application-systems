@@ -18,4 +18,4 @@ The CLI app accepts a hostname or an IP address as its argument and send ICMP "e
 - Error checking: checks for valid hostname, valid IPV4/IPV6 IP address, and valid ttl value
 
 ## Output
-![](https://github.com/fangjanet/cloudfare-internship-application-systems/blob/master/output.png)
+![Special thanks to Cloudflare for this amazing opportunity!](https://github.com/fangjanet/cloudfare-internship-application-systems/blob/master/output.png)
