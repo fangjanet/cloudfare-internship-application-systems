@@ -14,3 +14,6 @@ The CLI app accepts a hostname or an IP address as its argument and send ICMP "e
 - Added support for IPv4 and IPv6
 - Allows user to set TTL as an optional second argument and reports the corresponding "time exceeded” ICMP message
 - Error checking: checks for valid hostname, valid IPV4/IPV6 IP address, and valid ttl value
+
+## Output
+![]["https://github.com/fangjanet/cloudfare-internship-application-systems/blob/master/output.png"]
