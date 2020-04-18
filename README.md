@@ -1,7 +1,7 @@
 # Cloudflare Internship Application: Systems
 Ping CLI application for MacOS or Linux
 
-## To compile and run in terminal:
+## Compile and run in terminal:
 gcc -o myPing ping.c \
 sudo ./myping \<hostname or IPV4/IPV6 IP address>
 
