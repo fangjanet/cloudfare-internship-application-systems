@@ -13,4 +13,4 @@ The CLI app accepts a hostname or an IP address as its argument and send ICMP "e
 - Reports loss and RTT times for each sent message
 - Added support for IPv4 and IPv6
 - Allows user to set TTL as an optional second argument and reports the corresponding "time exceeded” ICMP message
-- Error checking: checks for valid hostname and valid IPV4/IPV6 IP address
+- Error checking: checks for valid hostname, valid IPV4/IPV6 IP address, and valid ttl value
