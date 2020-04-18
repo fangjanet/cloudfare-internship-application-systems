@@ -40,12 +40,13 @@ typedef int socket_t;
     #define ICMP6_ECHO_REPLY 129
 #endif
 
-#define REQUEST_TIMEOUT 1000000
+
 #define REQUEST_INTERVAL 1000000
 
 
 #pragma pack(push, 1)
 
+int REQUEST_TIMEOUT = 1000000;
 
 struct ip6_pseudo_hdr {
     struct in6_addr ip6_src;
@@ -110,6 +111,12 @@ int main(int argc, char **argv) {
                 //set the ip version
                 ip_version = IP_V6;
             }
+            //check if ipv6 is passed or not 
+            else if (strcmp(argv[i], "-ttl") == 0) {
+                //set the ip version
+                REQUEST_TIMEOUT = atoi(argv[i+1]);
+                i++;
+            }
         } else {
             //set the target host
             target_host = argv[i];
@@ -117,7 +124,7 @@ int main(int argc, char **argv) {
     }
     //if no target is provided, then display error and exit
     if (target_host == NULL) {
-        fprintf(stderr, "Usage: ping [-ip4] [-ip6] <target_host>\n");
+        fprintf(stderr, "Usage: ping [-ip4] [-ip6] [-ttl value] <target_host>\n");
         goto error_exit;
     }
     //init address info according to the ip version
@@ -142,7 +149,7 @@ int main(int argc, char **argv) {
                                 &addrinfo_hints,
                                 &addrinfo_head);
     }
-    //if error occured in initializing the address info, then display error and exit
+    //if error occured in initializing the address info then display error and exit
     if (gai_error != 0) {
         fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(gai_error));
         goto error_exit;
@@ -159,7 +166,7 @@ int main(int argc, char **argv) {
             break;
         }
     }
-    //if no socket was initializeed, then display the error and exit
+    //if no socket was initializeed then show the error and end
     if (sockfd < 0) {
         fprint_net_error(stderr, "socket");
         goto error_exit;
