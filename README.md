@@ -31,6 +31,6 @@ Using Libraries
 You may use libraries (both built-in and installed via package managers) and system calls as necessary. Please don't use the ping built-in application or a full library implementation of ping.
 
 Extra Credit
-Add support for both IPv4 and IPv6
-Allow to set TTL as an argument and report the corresponding "time exceeded” ICMP messages
-Any additional features listed in the ping man page or which you think would be valuable
+1. Add support for both IPv4 and IPv6
+2. Allow to set TTL as an argument and report the corresponding "time exceeded” ICMP messages
+3. Any additional features listed in the ping man page or which you think would be valuable
